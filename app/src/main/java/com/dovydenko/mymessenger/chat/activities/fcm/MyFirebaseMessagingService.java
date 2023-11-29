@@ -63,6 +63,7 @@ public class MyFirebaseMessagingService extends FirebaseMessagingService {
         if (!SessionManager.get().isNotificationOn()) {
             return;
         }
+
         // Check if message contains a data payload.
         if (remoteMessage.getData().size() > 0) {
             String sent = remoteMessage.getData().get(FCM_SENT);
