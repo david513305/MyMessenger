@@ -231,8 +231,8 @@ public class Utils {
     }
 
     public static String getDateTime() {
-        final DateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
-        dateFormat.setTimeZone(TimeZone.getTimeZone("UTC"));
+        final DateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm");
+        //dateFormat.setTimeZone(TimeZone.getTimeZone("UTC"));
         final Date date = new Date();
 
         return dateFormat.format(date);
@@ -255,7 +255,7 @@ public class Utils {
      * Gets timestamp in millis and converts it to HH:mm (e.g. 16:44).
      */
     public static String formatDateTime(long timeInMillis) {
-        SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss", Locale.getDefault());
+        SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm", Locale.getDefault());
         return dateFormat.format(timeInMillis);
     }
 
@@ -263,7 +263,7 @@ public class Utils {
      * Gets timestamp in millis and converts it to HH:mm (e.g. 16:44).
      */
     public static String formatTime(long timeInMillis) {
-        SimpleDateFormat dateFormat = new SimpleDateFormat("hh:mm a", Locale.getDefault());
+        SimpleDateFormat dateFormat = new SimpleDateFormat("HH:mm", Locale.getDefault());
         return dateFormat.format(timeInMillis);
     }
 
@@ -271,14 +271,14 @@ public class Utils {
      * Gets timestamp in millis and converts it to HH:mm (e.g. 16:44).
      */
     public static String formatLocalTime(long timeInMillis) {
-        SimpleDateFormat dateFormatUTC = new SimpleDateFormat("hh:mm a", Locale.getDefault());
-        dateFormatUTC.setTimeZone(TimeZone.getTimeZone("UTC"));
+        SimpleDateFormat dateFormatUTC = new SimpleDateFormat("HH:mm", Locale.getDefault());
+        //dateFormatUTC.setTimeZone(TimeZone.getTimeZone("UTC"));
         Date date = null;
         try {
             date = dateFormatUTC.parse(formatTime(timeInMillis));
         } catch (Exception ignored) {
         }
-        SimpleDateFormat dateFormat = new SimpleDateFormat("hh:mm a", Locale.getDefault());
+        SimpleDateFormat dateFormat = new SimpleDateFormat("HH:mm", Locale.getDefault());
         dateFormat.setTimeZone(TimeZone.getDefault());
         if (date == null) {
             return dateFormat.format(timeInMillis);
@@ -287,15 +287,15 @@ public class Utils {
     }
 
     public static String formatLocalFullTime(long timeInMillis) {
-        SimpleDateFormat dateFormatUTC = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss", Locale.getDefault());
-        dateFormatUTC.setTimeZone(TimeZone.getTimeZone("UTC"));
+        SimpleDateFormat dateFormatUTC = new SimpleDateFormat("yyyy-MM-dd HH:mm", Locale.getDefault());
+        //dateFormatUTC.setTimeZone(TimeZone.getTimeZone("UTC"));
         Date date = null;
         try {
             date = dateFormatUTC.parse(formatDateTime(timeInMillis));
         } catch (Exception e) {
             Utils.getErrors(e);
         }
-        SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss", Locale.getDefault());
+        SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm", Locale.getDefault());
         dateFormat.setTimeZone(TimeZone.getDefault());
         if (date == null) {
             return dateFormat.format(timeInMillis);
@@ -318,7 +318,7 @@ public class Utils {
     }
 
     public static long dateToMillis(String dateString) throws ParseException {
-        SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss", Locale.getDefault());
+        SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm", Locale.getDefault());
         Date date = sdf.parse(dateString);
         assert date != null;
         return date.getTime();
@@ -331,7 +331,7 @@ public class Utils {
         } catch (ParseException e) {
             e.printStackTrace();
         }
-        SimpleDateFormat dateFormat = new SimpleDateFormat("MMMM dd, yyyy", Locale.getDefault());
+        SimpleDateFormat dateFormat = new SimpleDateFormat("dd MMMM, yyyy", Locale.getDefault());
         return dateFormat.format(timeInMillis).toUpperCase();
     }
 

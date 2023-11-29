@@ -1,5 +1,6 @@
 package com.dovydenko.mymessenger.chat.activities.fragments;
 
+import static com.dovydenko.mymessenger.chat.activities.constants.IConstants.EXTRA_USERNAME;
 import static com.dovydenko.mymessenger.chat.activities.constants.IConstants.EXTRA_ABOUT;
 import static com.dovydenko.mymessenger.chat.activities.constants.IConstants.EXTRA_ADMIN;
 import static com.dovydenko.mymessenger.chat.activities.constants.IConstants.EXTRA_GROUPS_IN;
@@ -103,6 +104,7 @@ public class ProfileFragment extends BaseFragment implements View.OnClickListene
     private FirebaseUser firebaseUser;
     private DatabaseReference reference;
     private StorageReference storageReference;
+    private ImageView imgEditUsername;
     private ImageView imgEditAbout;
     private ImageView imgEditGender;
     private Button btnDeleteAccount;
@@ -129,8 +131,10 @@ public class ProfileFragment extends BaseFragment implements View.OnClickListene
         final TextView txtEmail = view.findViewById(R.id.txtEmail);
         final TextView txtAbout = view.findViewById(R.id.txtAbout);
         final TextView txtGender = view.findViewById(R.id.txtGender);
+        imgEditUsername = view.findViewById(R.id.imgEditUsername);
         imgEditAbout = view.findViewById(R.id.imgEdit);
         imgEditGender = view.findViewById(R.id.imgEditGender);
+        final RelativeLayout layoutUsername = view.findViewById(R.id.layoutUsername);
         final RelativeLayout layoutAbout = view.findViewById(R.id.layoutAbout);
         final RelativeLayout layoutGender = view.findViewById(R.id.layoutGender);
         btnDeleteAccount = view.findViewById(R.id.btnDeleteAccount);
@@ -151,6 +155,7 @@ public class ProfileFragment extends BaseFragment implements View.OnClickListene
             showHideViews(View.VISIBLE);
             layoutCameraGallery.setOnClickListener(this);
             imgAvatar.setOnClickListener(this);
+            layoutUsername.setOnClickListener(this);
             layoutAbout.setOnClickListener(this);
             layoutGender.setOnClickListener(this);
             btnDeleteAccount.setOnClickListener(this);
@@ -202,6 +207,7 @@ public class ProfileFragment extends BaseFragment implements View.OnClickListene
     }
 
     private void showHideViews(int isShow) {
+        imgEditUsername.setVisibility(isShow);
         imgEditAbout.setVisibility(isShow);
         imgEditGender.setVisibility(isShow);
         btnDeleteAccount.setVisibility(isShow);
@@ -211,13 +217,16 @@ public class ProfileFragment extends BaseFragment implements View.OnClickListene
     public void onClick(View v) {
         final int id = v.getId();
         if (id == R.id.layoutCameraGallery) {
-            if (Utils.isTypeEmail(strSignUpType)) {
-                openImageCropper();
-            } else {
-                screens.openFullImageViewActivity(v, strAvatarImg, strUsername);
-            }
+            openImageCropper();
+            //if (Utils.isTypeEmail(strSignUpType)) {
+            //    openImageCropper();
+            //} else {
+            //    screens.openFullImageViewActivity(v, strAvatarImg, strUsername);
+            //}
         } else if (id == R.id.imgAvatar) {
             screens.openFullImageViewActivity(v, strAvatarImg, strUsername);
+        } else if (id == R.id.layoutUsername) {
+            popupForUsername();
         } else if (id == R.id.layoutAbout) {
             popupForAbout();
         } else if (id == R.id.layoutGender) {
@@ -727,10 +736,73 @@ public class ProfileFragment extends BaseFragment implements View.OnClickListene
         }
     }
 
+    public void popupForUsername() {
+
+        final AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
+        //builder.setTitle(getText(R.string.strEnterUsername));
+
+        CardView view = (CardView) getLayoutInflater().inflate(R.layout.dialog_username, null);
+
+        if (SessionManager.get().isRTLOn()) {
+            view.setLayoutDirection(View.LAYOUT_DIRECTION_RTL);
+        } else {
+            view.setLayoutDirection(View.LAYOUT_DIRECTION_LTR);
+        }
+
+        final AppCompatButton btnCancel = view.findViewById(R.id.btnCancel);
+        final AppCompatButton btnDone = view.findViewById(R.id.btnDone);
+
+        builder.setView(view);
+
+        final EditText txtUsername = view.findViewById(R.id.txtUsername);
+        txtUsername.setText(strUsername);
+
+        final AlertDialog alert = builder.create();
+
+        btnCancel.setOnClickListener(new SingleClickListener() {
+            @Override
+            public void onClickView(View v) {
+                alert.dismiss();
+            }
+        });
+
+        btnDone.setOnClickListener(new SingleClickListener() {
+            @Override
+            public void onClickView(View v) {
+                try {
+                    final String strUsername = txtUsername.getText().toString().trim();
+
+                    if (Utils.isEmpty(strUsername)) {
+                        screens.showToast(R.string.msgErrorEnterUsername);
+                        return;
+                    }
+
+                    try {
+                        DatabaseReference reference = FirebaseDatabase.getInstance().getReference(REF_USERS).child(firebaseUser.getUid());
+                        HashMap<String, Object> hashMap = new HashMap<>();
+                        hashMap.put(EXTRA_USERNAME, strUsername);
+                        reference.updateChildren(hashMap);
+                    } catch (Exception e) {
+                        Utils.getErrors(e);
+                    }
+
+                } catch (Exception e) {
+                    Utils.getErrors(e);
+                }
+                alert.dismiss();
+            }
+        });
+
+        alert.getWindow().setBackgroundDrawableResource(android.R.color.transparent);
+        alert.setCanceledOnTouchOutside(false);
+        alert.setCancelable(false);
+        alert.show();
+    }
+
     public void popupForAbout() {
 
         final AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
-        builder.setTitle(getText(R.string.strEnterAbout));
+        //builder.setTitle(getText(R.string.strEnterAbout));
 
         CardView view = (CardView) getLayoutInflater().inflate(R.layout.dialog_description, null);
 

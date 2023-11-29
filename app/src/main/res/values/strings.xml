@@ -65,6 +65,8 @@
     <string name="strStatus">Про мене</string>
     <string name="strAboutStatus">Привіт! Я використовую MyMessenger.</string>
     <string name="strEnterAbout">Введіть свій статус</string>
+    <string name="strEnterUsername">Введіть імʼя користувача</string>
+    <string name="msgErrorEnterUsername">Будь ласка, введіть свій статус</string>
     <string name="msgErrorEnterDesc">Будь ласка, введіть свій статус</string>
     <string name="strDone">Зроблено</string>
     <string name="strCancel">Скасувати</string>
@@ -154,7 +156,7 @@
     <string name="settingVersion">Версія програми %1$s</string>
 
     <string name="staticDate">01–01–2000</string>
-    <string name="staticTime">01:01 AM</string>
+    <string name="staticTime">01:01</string>
     <string name="staticTimeZero">00:00</string>
     <string name="staticSize">123 KB</string>
     <string name="staticJPG">JPG</string>
