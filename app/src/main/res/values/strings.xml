@@ -1,0 +1,218 @@
+<resources>
+    <string name="app_name">MyMessenger</string>
+    <string name="app_description">Спілкуйтеся з друзями в реальному часі!</string>
+    <string name="app_company_name">Programmed by: %1$s</string>
+    <string name="app_company">David Dovydenko</string>
+    <string name="app_version">v %1$s</string>
+    <string name="cDescription" />
+
+    <string name="strSignIn">ВХІД</string>
+    <string name="strRegister">Реєстрація</string>
+    <string name="strEmail">E-MAIL</string>
+    <string name="strUsername">Імʼя користувача</string>
+    <string name="strPassword">Пароль</string>
+    <!--    <string name="strExistUser">Already have account? Sign In</string>-->
+    <string name="strExistUser"><![CDATA[<font color=#9e9e9e>Вже маєте обліковий запис?</font> <b><font color=#0671da>Вхід</font></b>]]></string>
+    <string name="strNewSignUp"><![CDATA[<font color=#9e9e9e>Не маєте облікового запису</font> <b><font color=#0671da>Зареєструватися</font></b>]]></string>
+    <string name="strReAuthenticate">Вхід</string>
+    <string name="strMsgAuthenticate">Будь ласка, переконайтеся, що видалений обліковий запис не може відновити будь-які дані, які існують на даний момент.</string>
+    <string name="strGroupAdmin">Адмін групи</string>
+    <string name="strCreatedOn">Створено о %1$s</string>
+    <string name="strParticipants">%1$d учасників</string>
+
+    <!-- Messages -->
+    <string name="msg_please_wait">Будь ласка, зачекайте…</string>
+    <string name="msg_image_upload">Завантаження…</string>
+    <string name="strLogout">Вийти з системи</string>
+    <string name="strTakeTour">Демонстрація можливостей</string>
+    <string name="strRateApp">Оцініть додаток</string>
+    <string name="strShareApp">Поділитися додатком</string>
+    <string name="strAboutUs">Про мене</string>
+    <string name="strSettings">Налаштування</string>
+    <string name="strPrivacy">Політика конфіденційності</string>
+    <string name="strPrivacySetting">Налаштування конфіденційності</string>
+    <string name="strDeleteAccount">Видалити мій обліковий запис</string>
+
+    <string name="strUserInfo">Інформація про користувача</string>
+    <string name="strGroupView">Інформація про групу</string>
+    <string name="strClearMyChats">Очистити власні чати</string>
+    <string name="strEditGroup">Редагувати групу</string>
+    <string name="strLeaveGroup">Вийти з групи</string>
+    <string name="strDeleteGroup">Видалити групу</string>
+    <string name="strExitGroup">Вийти з групи</string>
+    <!-- Close message-->
+    <string name="press_again_to_exit">Натисніть ще раз, щоб вийти з програми</string>
+
+    <string name="strChats">Чати</string>
+    <string name="strUsers">Користувачі</string>
+    <string name="strGroups">Групи</string>
+    <string name="strProfile">Профіль</string>
+    <string name="strCreateNewGroup">Створити групу</string>
+    <string name="strSearch">Пошук…</string>
+    <string name="strSearchWithCount">Пошук користувачів… (Всього користувачів : %1$d)</string>
+
+    <string name="default_notification_channel_id">fcm_default_channel</string>
+    <string name="strTyping">набір тексту…</string>
+    <string name="strShareTitle">MyMessenger</string>
+    <string name="strShareContent">Я хотів би поділитися з вами програмою MyMessenger. Ви можете легко завантажити цей додаток...</string>
+    <string name="strDeleteConversion">Ви хочете видалити це перетворення?</string>
+    <string name="strOK">OK</string>
+    <string name="strYes">Так</string>
+    <string name="strNo">Ні</string>
+    <string name="strOneCount">9</string>
+    <string name="strEmailSmall">E-mail</string>
+    <string name="strUsernameSmall">Імʼя користувача</string>
+    <string name="strStatus">Про мене</string>
+    <string name="strAboutStatus">Привіт! Я використовую MyMessenger.</string>
+    <string name="strEnterAbout">Введіть свій статус</string>
+    <string name="msgErrorEnterDesc">Будь ласка, введіть свій статус</string>
+    <string name="strDone">Зроблено</string>
+    <string name="strCancel">Скасувати</string>
+
+    <string name="strSelectGender">Виберіть стать</string>
+    <string name="msgSelectGender">Будь ласка, оберіть стать</string>
+    <string name="strGender">Стать</string>
+    <string name="strMale">Чоловік</string>
+    <string name="strFemale">Жінка</string>
+    <string name="strUnspecified">Не вказано</string>
+    <string-array name="arrGender">
+        <item>@string/strMale</item>
+        <item>@string/strFemale</item>
+    </string-array>
+
+    <!-- Filters -->
+    <string name="strFilters">Фільтри</string>
+    <string name="strFilterTitle">Фільтри</string>
+    <string name="strFilterOnline">Online/Offline</string>
+    <string name="strOnline">Online</string>
+    <string name="strOffline">Offline</string>
+    <string name="msgErrorUserOnline">Будь ласка, оберіть принаймні 1 (Online або Offline)</string>
+    <string name="msgErrorGender">Будь ласка, оберіть стать</string>
+    <string name="strAllFieldsRequired">Всі поля обовʼязкові для заповнення!</string>
+    <string name="strInvalidEmailPassword">Неправильна адреса електронної пошти або пароль!</string>
+    <string name="strInvalidEmail">Неправильна адреса електронної пошти!</string>
+    <string name="strEnterGroupName">Введіть назву групи</string>
+    <string name="msgEnterGroupName">Будь ласка, введіть назву групи</string>
+    <string name="msgGroupMoreThanOne">Додайте щонайменше двох учасників, щоб створити групу</string>
+    <string name="msgTapToStartChat">Натисніть, щоб почати груповий чат!</string>
+    <string name="strYou">Ви</string>
+    <string name="strGroupInfo">Натисніть, щоб переглянути інформацію про групу</string>
+    <string name="lblAboutUs">Про мене</string>
+    <string name="lblPrivacyPolicy">Політика конфіденційності</string>
+    <string name="strEmptyMsg">Ви не можете надіслати порожнє повідомлення</string>
+    <string name="msgOnlyAdminEdit">Тільки адміністратор групи може редагувати групу.</string>
+    <string name="msgOnlyAdminDelete">Тільки адміністратор групи може видалити групу.</string>
+    <string name="msgFailedToUpload">Не вдалося завантажити!</string>
+    <string name="strNewMessage">Нове повідомлення</string>
+    <string name="strNewGroupMessage">Нове повідомлення групи</string>
+    <string name="strSelected">Selected :</string>
+    <string name="msgUploadInProgress">Завантаження триває!</string>
+    <string name="lblPhoto">Фото</string>
+    <string name="strDelete">Видалити</string>
+    <string name="strLeave">Залишити групу</string>
+    <string name="strDeleteOwnChats">Ви хочете видалити власні чати?</string>
+    <string name="strLeaveFromGroup">Ви хочете вийти з цієї групи (вона також видалить ваші власні чати)?</string>
+    <string name="strDeleteWholeGroup">Ви хочете видалити всю групу (при цьому будуть видалені всі дані)?</string>
+    <string name="strPhotoSent">Натисніть, щоб переглянути фото, надіслане %1$s</string>
+
+    <string name="profile_setting">НАЛАШТУВАННЯ ПРОФІЛЮ</string>
+    <string name="general_setting">ЗАГАЛЬНІ НАЛАШТУВАННЯ</string>
+    <string name="notification">Повідомлення</string>
+    <string name="rtl">RTL (справа наліво)</string>
+
+    <string name="ref_title">Оновити</string>
+    <string name="ref_message">Щоб відобразити нові зміни, додаток автоматично перезапуститься</string>
+    <string name="logout_title">Вийти з системи</string>
+    <string name="logout_message">Ви хочете вийти з програми?</string>
+
+    <!-- New v1.4 -->
+    <!-- New v1.4 -->
+    <string name="strTypeYourMessage">Введіть своє повідомлення</string>
+    <string name="msgNoImageSelected">Зображення не вибрано!</string>
+    <string name="lblImage">Зображення</string>
+    <string name="lblAudio">Аудіо</string>
+    <string name="lblVideo">Відео</string>
+    <string name="lblDocument">Документ</string>
+    <string name="lblContact">Контакт</string>
+    <string name="lblLocation">Локація</string>
+    <string name="lblVoiceRecording">Голосове повідомлення</string>
+
+    <string name="recording_cancelled">Запис скасовано</string>
+    <string name="recording">Запис…</string>
+    <string name="msgFileNotFound">Файл не знайдено!</string>
+
+    <string name="strProfilePic">Зображення профілю</string>
+    <string name="strWithPicture">З зображенням</string>
+    <string name="strWithoutPicture">Без зображення</string>
+    <string name="msgErrorProfilePicture">Будь ласка, виберіть принаймні 1 варіант зображення профілю</string>
+
+    <string name="titleSendMessages">Надіслати повідомлення</string>
+    <string name="lblMessageSetting">Виберіть, хто може надсилати повідомлення до цієї групи</string>
+    <string name="lblAllParticipants">Всі учасники</string>
+    <string name="lblOnlyAdmin">Тільки адміністратор</string>
+    <string name="only_admin_can_send_messages"><![CDATA[Тільки <strong><font color=#2196F3>адмін</font></strong> може надсилати повідомлення]]></string>
+    <string name="settingVersion">Версія програми %1$s</string>
+
+    <string name="staticDate">01–01–2000</string>
+    <string name="staticTime">01:01 AM</string>
+    <string name="staticTimeZero">00:00</string>
+    <string name="staticSize">123 KB</string>
+    <string name="staticJPG">JPG</string>
+    <string name="choose_file">Виберіть файл</string>
+    <string name="choose_contact">Виберіть контакт</string>
+    <string name="msgWaitingForFile">Будь ласка, зачекайте на отримання файлу…</string>
+    <string name="msgChooseFileFromOtherLocation">Будь ласка, виберіть файл з відповідного місця</string>
+    <!--    <string name="msgInvalidOrCorruptFile">Invalid or corrupted file.</string>-->
+    <string name="msgInvalidOrCorruptFile">Файл документу</string>
+    <string name="msgDownloadingStarted">Завантаження розпочато</string>
+    <string name="msgDownloadFile">Завантажено %1$s</string>
+    <string name="lblInvite">Запросити</string>
+    <string name="msgFileTooBig">Файл занадто великий (max = %1$dMB)</string>
+    <string name="strSlideToCancel">Клацніть, щоб скасувати</string>
+    <string name="msgGPSTurnOn">Будь ласка, увімкніть GPS, щоб визначити місцезнаходження</string>
+
+    <string name="sliderTitle1">Ласкаво просимо!\nMyMessenger!</string>
+    <string name="sliderTitle2">Спілкуйтеся будь коли,\nДе завгодно!</string>
+    <string name="sliderTitle3">Створюйте приватні,\nгрупові чати!</string>
+    <string name="sliderTitle4">Відправляйте повідомлення,\nМедіа та файли</string>
+    <string name="sliderTitle5">Отримано\nВажливе повідомлення</string>
+
+    <string name="sliderDesc1">Безкоштовне спілкування в чаті між друзями та членами сімʼї - це легко і практично скрізь і на будь-якому пристрої.</string>
+    <string name="sliderDesc2">Миттєва передача будь-якої інформації на будь-який екран, будь-який пристрій стала простою.</string>
+    <string name="sliderDesc3">Створіть груповий чат і залишайтеся на звʼязку зі своїми друзями та діліться спогадами.</string>
+    <string name="sliderDesc4">Розважайтеся з друзями, надсилаючи фото, аудіо, відео та інші документи швидше і швидше</string>
+    <string name="sliderDesc5">Отримуйте важливі сповіщення, коли друзі пишуть вам у чаті.</string>
+    <string name="strNoGroupCreated">Ще не створено жодної групи!</string>
+    <string name="strYouHaveNoGroups">Схоже, ви не створили групи!</string>
+    <string name="strGallery">Галерея</string>
+    <string name="strCamera">Камера</string>
+    <string name="lblZeroPercentage">0 %</string>
+    <string name="strZeroTimer">00:00:00 / 00:00:00</string>
+
+    <string name="lblHideEmail">@string/strEmailSmall</string>
+    <string name="lblHideProfilePhoto">Фотографія профілю</string>
+    <string name="msgPrivateEmail">Особиста електронна пошта користувача</string>
+    <string name="hide_profile">НАЛАШТУВАННЯ ПРОФІЛЮ</string>
+    <string name="msgHideProfile">Приховати/показати опції під час перегляду вашого профілю іншими користувачами</string>
+
+    <string name="strNoChatCreated">Ще немає повідомлень!</string>
+    <string name="strYouHaveNoChat">Схоже, ви не отримували та не писали повідомлення</string>
+    <string name="strNoSearchFound">Вибачте, результатів пошуку немає</string>
+    <string name="strForgetPassword">Забули пароль?</string>
+    <string name="strForgetMsg">Введіть ваш зареєстрований email нижче\для отримання інструкцій щодо відновлення паролю.</string>
+    <string name="lblSendYouForgetEmail">Check EMAIL</string>
+    <string name="strSubmit">Надіслати</string>
+
+    <string name="lblOr">АБО</string>
+    <string name="strGoogleLogin">Увійдіть за допомогою Google</string>
+    <string name="lblDeleteGoogle">Видалити обліковий запис</string>
+    <string name="strEmailFieldsRequired">Поле електронної пошти обовʼязкове для заповнення!</string>
+
+    <string name="strBlock">Заблокувати</string>
+    <string name="strUnblock">Розблокувати</string>
+    <string name="msgBlockSuccessfully">Успішне блокування.</string>
+    <string name="msgUnblockSuccessfully">Успішне розблокування.</string>
+    <string name="msgBlockForNotSend">Ви заблоковані цим користувачем, та не можете надіслати повідомлення.</string>
+    <string name="msgUnblockToSend">Розблокувати %1$s щоб надіслати повідомлення</string>
+    <string name="msgNoMessage">Немає повідомлення!</string>
+</resources>
