@@ -55,7 +55,7 @@
     <string name="strTyping">набір тексту…</string>
     <string name="strShareTitle">MyMessenger</string>
     <string name="strShareContent">Я хотів би поділитися з вами програмою MyMessenger. Ви можете легко завантажити цей додаток...</string>
-    <string name="strDeleteConversion">Ви хочете видалити це перетворення?</string>
+    <string name="strDeleteConversion">Ви хочете видалити цей чат?</string>
     <string name="strOK">OK</string>
     <string name="strYes">Так</string>
     <string name="strNo">Ні</string>
@@ -119,7 +119,7 @@
 
     <string name="profile_setting">НАЛАШТУВАННЯ ПРОФІЛЮ</string>
     <string name="general_setting">ЗАГАЛЬНІ НАЛАШТУВАННЯ</string>
-    <string name="notification">Повідомлення</string>
+    <string name="notification">Сповіщення</string>
     <string name="rtl">RTL (справа наліво)</string>
 
     <string name="ref_title">Оновити</string>
